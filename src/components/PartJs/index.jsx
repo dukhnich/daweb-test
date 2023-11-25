@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import FridgeItem from "../FridgeItem";
+import Products from "../Products";
 
 const PartJs = () => {
+  const [count, setCount] = useState(0);
   const lednice = [
     {
       name: "Smetana",
@@ -29,12 +31,33 @@ const PartJs = () => {
       expiration: 23,
     },
   ];
-  console.log(lednice)
+  console.log(lednice);
+  const handbags = [
+    {
+      brand: "Guess",
+      price: 3600,
+    },
+    {
+      brand: "Chanel",
+      price: 225000,
+    },
+    {
+      brand: "Prada",
+      price: 65000,
+    },
+  ];
   useEffect(() => {
     const sayHello = () => {
       console.log("ahoj");
     };
     document.querySelector("#btn")?.addEventListener("click", sayHello);
+    const getData = async () => {
+      const response = await fetch("https://restcountries.com/v3.1/alpha/cz");
+      const data = await response.json();
+      setCount(data[0].population);
+      console.log(data[0].population);
+    };
+    getData();
   }, []);
   return (
     <>
@@ -84,6 +107,14 @@ const PartJs = () => {
         {lednice.map((item, i) => (
           <FridgeItem {...item} key={i} />
         ))}
+      </section>
+      <section>
+        <h3>10. Kabelky</h3>
+        <Products handbags={handbags} />
+      </section>
+      <section>
+        <h3>11. Počet obyvatel</h3>
+        <p>{count}</p>
       </section>
     </>
   );
