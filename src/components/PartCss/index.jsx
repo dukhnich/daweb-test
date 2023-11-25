@@ -1,4 +1,4 @@
-import './style.css'
+import "./style.css";
 
 const PartCss = () => (
   <>
@@ -18,7 +18,19 @@ const PartCss = () => (
       </div>
     </section>
     <section>
-      <h3 className='nadpis'>3. Responzivní nadpis</h3>
+      <h3 className="nadpis">3. Responzivní nadpis</h3>
+    </section>
+    <section>
+      <h3>4. Sloupečky</h3>
+      <div className="row">
+        <div className="column">První sloupeček</div>
+        <div className="column">Druhý</div>
+        <div className="column">
+          A úplně
+          <br />
+          poslední sloupeček
+        </div>
+      </div>
     </section>
   </>
 );
