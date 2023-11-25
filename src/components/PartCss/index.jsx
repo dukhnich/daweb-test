@@ -17,6 +17,9 @@ const PartCss = () => (
         <button className="close">×</button>
       </div>
     </section>
+    <section>
+      <h3 className='nadpis'>3. Responzivní nadpis</h3>
+    </section>
   </>
 );
 export default PartCss;
