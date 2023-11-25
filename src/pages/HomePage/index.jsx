@@ -2,6 +2,7 @@ import "./style.css";
 import PartCss from "../../components/PartCss";
 import PartGit from "../../components/PartGit";
 import PartJs from "../../components/PartJs";
+import PartReact from "../../components/PartReact";
 export const HomePage = () => {
   return (
     <div className="container">
@@ -12,6 +13,7 @@ export const HomePage = () => {
         <PartCss />
         <PartGit />
         <PartJs />
+        <PartReact />
       </main>
       <footer>
         <p>Czechitas, Digitální akademie: Web</p>
