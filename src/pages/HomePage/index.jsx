@@ -1,6 +1,7 @@
-import './style.css';
-import PartCss from '../../components/PartCss';
-import PartGit from '../../components/PartGit';
+import "./style.css";
+import PartCss from "../../components/PartCss";
+import PartGit from "../../components/PartGit";
+import PartJs from "../../components/PartJs";
 export const HomePage = () => {
   return (
     <div className="container">
@@ -10,6 +11,7 @@ export const HomePage = () => {
       <main>
         <PartCss />
         <PartGit />
+        <PartJs />
       </main>
       <footer>
         <p>Czechitas, Digitální akademie: Web</p>
