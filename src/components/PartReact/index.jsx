@@ -1,3 +1,5 @@
+import LightSwitch from "../LightSwitch";
+
 const PartReact = () => (
   <>
     <h2>React</h2>
@@ -13,6 +15,10 @@ const PartReact = () => (
           console.log("Hello!")
         }, [])`}
       </p>
+    </section>
+    <section>
+      <h3>14. Vypínač světla</h3>
+      <LightSwitch />
     </section>
   </>
 );
