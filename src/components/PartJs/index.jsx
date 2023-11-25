@@ -2,6 +2,34 @@ import { useEffect } from "react";
 import FridgeItem from "../FridgeItem";
 
 const PartJs = () => {
+  const lednice = [
+    {
+      name: "Smetana",
+      type: "Mléčný výrobek",
+      expiration: 12,
+    },
+    {
+      name: "Máslo",
+      type: "Mléčný výrobek",
+      expiration: 70,
+    },
+    {
+      name: "Rajčata",
+      type: "Zelenina",
+      expiration: 20,
+    },
+    {
+      name: "Brambory",
+      type: "Zelenina",
+      expiration: 65,
+    },
+    {
+      name: "Okurky",
+      type: "Zelenina",
+      expiration: 23,
+    },
+  ];
+  console.log(lednice)
   useEffect(() => {
     const sayHello = () => {
       console.log("ahoj");
@@ -50,6 +78,12 @@ const PartJs = () => {
       <section>
         <h3>8. Komponenta FridgeItem</h3>
         <FridgeItem name="Smetana" type="Mléčný výrobek" expiration={12} />
+      </section>
+      <section>
+        <h3>9. Pole objektů</h3>
+        {lednice.map((item, i) => (
+          <FridgeItem {...item} key={i} />
+        ))}
       </section>
     </>
   );
